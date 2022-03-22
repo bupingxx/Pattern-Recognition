@@ -28,11 +28,11 @@ new_e1 = V(:,1); % 第一个特征向量，减去平均向量
 
 ​	当scale变化时，如果没有减去平均向量，得到的第一个特征向量值如下：
 
-![image-20220315003537398](C:\Users\82458\Desktop\github\Pattern-Recognition\PCA-LDA\src\image-1.png)
+![image-1](https://github.com/bupingxx/Pattern-Recognition/blob/main/PCA-LDA/src/image-1.png)
 
 ​	如果有减去平均向量，得到的第一个特征向量值如下：
 
-![image-20220315003527882](C:\Users\82458\Desktop\github\Pattern-Recognition\PCA-LDA\src\image-2.png)
+![image-2](https://github.com/bupingxx/Pattern-Recognition/blob/main/PCA-LDA/src/image-2.png)
 
 ​	可以看出，如果对每个样本进行减去平均向量的转换，那么在scale变化时，第一个特征向量值是不变的；如果没有减去平均向量，在scale较大时会得到错误的结果，直到scale减小到0.001，才会得到正确的特征向量。
 
@@ -52,7 +52,7 @@ corr2 = e1.' * new_e1;
 
 ​	结果如下，其中`corr1`为未减去平均向量的第一特征向量与平均向量的相关系数，`corr2`为两个第一特征向量的相关系数：
 
-![image-20220315004226640](C:\Users\82458\Desktop\github\Pattern-Recognition\PCA-LDA\src\image-3.png)
+![image-3](https://github.com/bupingxx/Pattern-Recognition/blob/main/PCA-LDA/src/image-3.png)
 
 ​	可以看出在scale较小时，e1与平均向量相关程度较高，随着scale增大，相关程度渐渐变小，所以在`scale=0.001`之后e1逐渐趋于e2，`corr2`的绝对值因此也接近于1。
 
@@ -64,7 +64,7 @@ corr2 = e1.' * new_e1;
 
 ​	生成2000个二维样本，使用scatter函数画出图像如下：
 
-![image-20220315105828619](C:\Users\82458\Desktop\github\Pattern-Recognition\PCA-LDA\src\image-4.png)
+![image-20220315105828619](https://github.com/bupingxx/Pattern-Recognition/blob/main/PCA-LDA/src/image-4.png)
 
 ##### （b）PCA变换
 
@@ -85,7 +85,7 @@ ylim([-10,10]);
 
 ​	画出PCA后的样本，如下所示：
 
-![image-20220315105837589](C:\Users\82458\Desktop\github\Pattern-Recognition\PCA-LDA\src\image-5.png)
+![image-20220315105837589](https://github.com/bupingxx/Pattern-Recognition/blob/main/PCA-LDA/src/image-5.png)
 
 
 
@@ -104,7 +104,7 @@ ylim([-4,4]);
 
 ​	画出白化后的样本，如下所示：
 
-![image-20220315105901234](C:\Users\82458\Desktop\github\Pattern-Recognition\PCA-LDA\src\image-6.png)
+![image-20220315105901234](https://github.com/bupingxx/Pattern-Recognition/blob/main/PCA-LDA/src/image-6.png)
 
 
 
@@ -272,25 +272,25 @@ int main(int argc, const char* argv[]) {
 
 ​	训练集的平均脸：
 
-![image-20220322235631526](C:\Users\82458\Desktop\github\Pattern-Recognition\PCA-LDA\src\image-7.png)
+![image-20220322235631526](https://github.com/bupingxx/Pattern-Recognition/blob/main/PCA-LDA/src/image-7.png)
 
 ___
 
 ​	前10个Eigenvalue（特征值），以及预测结果：
 
-![image-20220323002759089](C:\Users\82458\Desktop\github\Pattern-Recognition\PCA-LDA\src\image-8.png)
+![image-20220323002759089](https://github.com/bupingxx/Pattern-Recognition/blob/main/PCA-LDA/src/image-8.png)
 
 ___
 
 ​	前10个Eigenface（resize为原图尺寸，使用`Jet Colormap`突出灰度值在特征脸中的分布）：
 
-![image-20220322235749971](C:\Users\82458\Desktop\github\Pattern-Recognition\PCA-LDA\src\image-9.png)
+![image-20220322235749971](https://github.com/bupingxx/Pattern-Recognition/blob/main/PCA-LDA/src/image-9.png)
 
 ___
 
 ​	根据Eigenface重构的人脸图像：
 
-![image-20220323000219259](C:\Users\82458\Desktop\github\Pattern-Recognition\PCA-LDA\src\image-10.png)
+![image-20220323000219259](https://github.com/bupingxx/Pattern-Recognition/blob/main/PCA-LDA/src/image-10.png)
 
 ___
 
@@ -298,25 +298,25 @@ ___
 
 ​	训练集的平均脸：
 
-![image-20220322235631526](C:\Users\82458\Desktop\github\Pattern-Recognition\PCA-LDA\src\image-11.png)
+![image-20220322235631526](https://github.com/bupingxx/Pattern-Recognition/blob/main/PCA-LDA/src/image-11.png)
 
 ___
 
 ​	前10个Eigenvalue（特征值），以及预测结果：
 
-![image-20220323001125799](C:\Users\82458\Desktop\github\Pattern-Recognition\PCA-LDA\src\image-12.png)
+![image-20220323001125799](https://github.com/bupingxx/Pattern-Recognition/blob/main/PCA-LDA/src/image-12.png)
 
 ___
 
 ​	前10个Fisherface（resize为原图尺寸，使用`Bone Colormap`突出灰度值在fisherface中的分布）：
 
-![image-20220323001503483](C:\Users\82458\Desktop\github\Pattern-Recognition\PCA-LDA\src\image-13.png)
+![image-20220323001503483](https://github.com/bupingxx/Pattern-Recognition/blob/main/PCA-LDA/src/image-13.png)
 
 ___
 
 ​	根据Eigenface重构的人脸图像：
 
-![image-20220323001356552](C:\Users\82458\Desktop\github\Pattern-Recognition\PCA-LDA\src\image-14.png)
+![image-20220323001356552](https://github.com/bupingxx/Pattern-Recognition/blob/main/PCA-LDA/src/image-14.png)
 
 ___
 
@@ -326,38 +326,38 @@ ___
 
 ​	在重建的时候，由于FisherFace只关注各类目标间的不同特征，所以难以重建出原图像。而在EigenFace中，当使用更多数量的eigenfaces时，可以得到更好的重构图像。用于测试的原图像为：
 
-![image-20220323003349607](C:\Users\82458\Desktop\github\Pattern-Recognition\PCA-LDA\src\image-15.png)
+![image-20220323003349607](https://github.com/bupingxx/Pattern-Recognition/blob/main/PCA-LDA/src/image-15.png)
 
 ​	使用50个特征脸时得到的结果为：
 
-![image-20220323002530972](C:\Users\82458\AppData\Roaming\Typora\typora-user-images\image-20220323002530972.png)
+![image-20220323002530972](https://github.com/bupingxx/Pattern-Recognition/blob/main/PCA-LDA/src/image-16.png)
 
 ​	使用100个特征脸时得到的结果为：
 
-![image-20220323002933659](C:\Users\82458\Desktop\current\模式识别\作业\PCA\reconstruct100.png)
+![image-20220323002933659](https://github.com/bupingxx/Pattern-Recognition/blob/main/PCA-LDA/src/image-17.png)
 
 ​	使用150个特征脸时得到的结果为：
 
-![image-20220323003014831](C:\Users\82458\Desktop\current\模式识别\作业\PCA\reconstruct150.png)
+![image-20220323003014831](https://github.com/bupingxx/Pattern-Recognition/blob/main/PCA-LDA/src/image-18.png)
 
 ​	使用200个特征脸时得到的结果为：
 
-![image-20220323003036223](C:\Users\82458\Desktop\current\模式识别\作业\PCA\reconstruct200.png)
+![image-20220323003036223](https://github.com/bupingxx/Pattern-Recognition/blob/main/PCA-LDA/src/image-19.png)
 
 ​	使用250个特征脸时得到的结果为：
 
-![image-20220323003102352](C:\Users\82458\Desktop\current\模式识别\作业\PCA\reconstruct250.png)
+![image-20220323003102352](https://github.com/bupingxx/Pattern-Recognition/blob/main/PCA-LDA/src/image-20.png)
 
 ​	使用300个特征脸时得到的结果为：
 
-![image-20220323003118301](C:\Users\82458\Desktop\current\模式识别\作业\PCA\reconstruct300.png)
+![image-20220323003118301](https://github.com/bupingxx/Pattern-Recognition/blob/main/PCA-LDA/src/image-21.png)
 
 ​	使用350个特征脸时得到的结果为：
 
-![image-20220323003732156](C:\Users\82458\AppData\Roaming\Typora\typora-user-images\image-20220323003732156.png)
+![image-20220323003732156](https://github.com/bupingxx/Pattern-Recognition/blob/main/PCA-LDA/src/image-22.png)
 
 ​	使用400个特征脸时得到的结果为：
 
-![image-20220323003743329](C:\Users\82458\AppData\Roaming\Typora\typora-user-images\image-20220323003743329.png)
+![image-20220323003743329](https://github.com/bupingxx/Pattern-Recognition/blob/main/PCA-LDA/src/image-23.png)
 
 ​	可以看到，当使用200个特征脸时，可以重构出原本人脸的大致轮廓；当使用300个特征脸时，可以重构出原本人脸的基本细节，但是仍有一点模糊；当使用400个特征脸时，重构图像已经与原始输入的图像难以区分了。
